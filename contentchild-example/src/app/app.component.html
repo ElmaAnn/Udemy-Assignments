@@ -1,0 +1,17 @@
+<hr />
+<div>
+  <app-child>
+    <h1 #headingContent>{{ headingStr }}</h1>
+    <hr />
+    <h2>Example of Content Child</h2>
+
+    <button class="btn btn-primary" (click)="onClick()">Click Me..!</button>
+
+    <h5>This is ng-content example</h5>
+  </app-child>
+  <hr />
+  <h3 align="center">Date Picker Component</h3>
+  <div class="date-box">
+    <app-date-viewer></app-date-viewer>
+  </div>
+</div>

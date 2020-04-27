@@ -1,0 +1,11 @@
+<h2>Use Cases of ViewChild</h2>
+<h4>For communication between components</h4>
+<h4>To change the appearance and behavior of DOM elements</h4>
+<hr />
+
+<app-counter-parent></app-counter-parent>
+<hr />
+<div>
+  Enter your Name :<input type="text" #nameRef [(ngModel)]="name" />
+  <h5>Welcome : {{ name }}</h5>
+</div>

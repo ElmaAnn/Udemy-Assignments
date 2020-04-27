@@ -1,0 +1,16 @@
+h2 {
+  color: red;
+}
+h5 {
+  color: palevioletred;
+}
+.date-box {
+  height: 12vh;
+  width: 100%;
+  background-color: peru;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1vh;
+  color: darkblue;
+  font-size: 30px;
+}
