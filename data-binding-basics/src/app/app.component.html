@@ -1,0 +1,25 @@
+<h1>Data - Binding in Angular</h1>
+<hr />
+<h4>Using String Interpolation</h4>
+
+Message from Interpolation - {{ bindString_1 }}
+<hr />
+<h4>Using Property Binding</h4>
+<input type="text" [value]="bindString_2" />
+<hr />
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Two way binding using Interpolation and Property Binding</h4>
+      <input
+        [value]="bindString_2"
+        (input)="bindString_2 = $event.target.value"
+      /><br /><br />
+      The message is {{ bindString_2 }}
+      <hr />
+      <h4>Using ngModel - 2 way binding</h4>
+      <input type="text" [(ngModel)]="bindString_3" /><br /><br />
+      The message is :{{ bindString_3 }}
+    </div>
+  </div>
+</div>

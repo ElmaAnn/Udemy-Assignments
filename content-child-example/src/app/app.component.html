@@ -1,0 +1,19 @@
+<app-child>
+  <h1>Content Projection Example</h1>
+  <button type="button">Button-1</button>
+  <button type="button">Button-2</button>
+  <button type="button">Button-3</button>
+  <h4>How to use ng-content</h4>
+  <hr />
+  <h4>From child component using Content Child</h4>
+  <p>Displaying DateViewer Component</p>
+  <app-date-viewer></app-date-viewer><br />
+  <app-date-viewer></app-date-viewer><br />
+  <app-date-viewer></app-date-viewer>
+</app-child>
+
+<h1>From Parent Component</h1>
+<h3>Displaying DateViewer Component</h3>
+<div class="date-box">
+  <app-date-viewer></app-date-viewer>
+</div>

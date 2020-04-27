@@ -1,0 +1,13 @@
+p {
+  color: red;
+}
+
+.date-box {
+  background-color: palevioletred;
+  height: 8vh;
+  text-align: center;
+  color: wheat;
+  font-weight: bold;
+  padding-top: 20px;
+  font-size: 20px;
+}
