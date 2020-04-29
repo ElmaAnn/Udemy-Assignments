@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row form-group">
+    <h3>Entry Component Example</h3>
+    <h5>Select a value from the drop down :</h5>
+    <div class="col-sm-8 col-md-4">
+      <select (change)="selectName($event.target.value)">
+        <option value="0">--Select--</option>
+        <option [value]="item.id" *ngFor="let item of data">
+          {{ item.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <ng-template #loadComponent> </ng-template>
+  </div>
+</div>

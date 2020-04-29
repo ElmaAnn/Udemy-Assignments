@@ -1,0 +1,22 @@
+.alert-box {
+  width: 50vw;
+  background-color: powderblue;
+  color: darkblue;
+  font-size: 20px;
+  text-align: center;
+}
+p {
+  margin-top: 5px;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+}
+.btn {
+  margin-top: 10px;
+  background-color: darkblue;
+  border-radius: 10px;
+  width: 8vw;
+  height: 5vh;
+  font-size: 15px;
+  color: white;
+}
