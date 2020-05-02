@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <form [formGroup]="signupFrom" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input
+            type="text"
+            id="fullname"
+            formControlName="fullname"
+            class="form-control"
+          />
+          <span
+            *ngIf="
+              !signupFrom.get('fullname').valid &&
+              signupFrom.get('fullname').touched
+            "
+            class="help-block"
+            >This field is mandatory</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="form-control"
+          />
+          <span
+            *ngIf="
+              !signupFrom.get('email').valid && signupFrom.get('email').touched
+            "
+            class="help-block"
+            >Please enter a valid email</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            formControlName="phone"
+            class="form-control"
+          />
+          <span
+            *ngIf="
+              !signupFrom.get('phone').valid && signupFrom.get('phone').touched
+            "
+            class="help-block"
+            >Enter your phone number</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="address">Current Address</label>
+          <textarea
+            id="address"
+            formControlName="address"
+            class="form-control"
+          ></textarea>
+
+          <span
+            *ngIf="
+              !signupFrom.get('address').valid &&
+              signupFrom.get('address').touched
+            "
+            class="help-block"
+            >Please enter your address</span
+          >
+        </div>
+        <div class="radio" *ngFor="let gender of genders">
+          <label>
+            <input type="radio" [value]="gender" formControlName="gender" />{{
+              gender
+            }}
+          </label>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

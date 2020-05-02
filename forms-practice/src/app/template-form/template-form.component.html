@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <form #form="ngForm" (ngSubmit)="onRegister(form)">
+        <h2 class="text-center">Template Driven Form</h2>
+        <br />
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="First Name"
+            name="firstname"
+            required
+            ngModel
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Last Name"
+            name="lastname"
+            required
+            ngModel
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Email"
+            name="email"
+            email
+            required
+            ngModel
+            #email="ngModel"
+          />
+          <span class="help-bpx" *ngIf="email.touched && !email.valid"
+            >Please enter the Email Value</span
+          >
+        </div>
+        <div class="form-group"></div>
+        <br />
+
+        <div class="text-center">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            id="register"
+            [disabled]="!form.valid"
+          >
+            Register
+          </button>
+       
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
